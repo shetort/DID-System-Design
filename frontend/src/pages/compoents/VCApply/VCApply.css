@@ -1,0 +1,238 @@
+/* VCApply.css */
+:root {
+    --primary: #4a90e2;
+    --success: #20c997;
+    --danger: #dc3545;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --border: #e9ecef;
+    --background: #f8f9fa;
+    --radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* 主容器 */
+.did-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+/* 申请记录 */
+.application-history {
+    margin-bottom: 2rem;
+}
+
+.toggle-history-button {
+    background: linear-gradient(135deg, var(--primary), #63b4ff);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-history-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.application-list {
+    margin-top: 1.5rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.application-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 0.8rem 0;
+    background: var(--background);
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+}
+
+.application-item:hover {
+    transform: translateX(4px);
+}
+
+.detail-button {
+    background: rgba(74, 144, 226, 0.1);
+    color: var(--primary);
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* 颁发者列表 */
+.user-category {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.category-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.user-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.user-card {
+    background: var(--background);
+    padding: 1rem;
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+}
+
+.user-card:hover {
+    transform: translateY(-2px);
+}
+
+.user-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action-button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-button.danger {
+    background: var(--danger);
+}
+
+.action-button:hover {
+    opacity: 0.9;
+}
+
+/* 弹窗样式 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    width: 600px;
+    max-height: 70vh;
+    padding: 2rem;
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.modal-scroll-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0 1rem;
+    margin: 0 -1rem;
+}
+
+.modal-scroll-container::-webkit-scrollbar {
+    width: 8px;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.modal-scroll-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.fields-container {
+    display: grid;
+    gap: 1rem;
+    padding: 0 1rem;
+    min-height: min-content;
+}
+
+.field-group {
+    margin-bottom: 1rem;
+    /* padding: 1rem; */
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+.nested-fields {
+    margin-left: 1rem;
+    border-left: 2px solid var(--primary);
+    padding-left: 1rem;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    justify-content: flex-end;
+}
+
+/* 详情弹窗 */
+.modern-modal {
+    background: white;
+    width: 600px;
+    max-height: 80vh;
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.data-card {
+    background: var(--background);
+    padding: 1rem;
+    border-radius: var(--radius);
+    margin-top: 1.5rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+
+    .modal-content,
+    .modern-modal {
+        width: 90vw;
+        max-height: 90vh;
+    }
+
+    .user-grid {
+        grid-template-columns: 1fr;
+    }
+}

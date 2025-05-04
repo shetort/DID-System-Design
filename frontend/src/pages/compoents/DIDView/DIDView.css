@@ -1,0 +1,265 @@
+/* DIDView.css */
+:root {
+    --primary: #4a90e2;
+    --success: #20c997;
+    --danger: #dc3545;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --border: #e9ecef;
+    --background: #f8f9fa;
+    --radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.did-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+/* 数据列表样式 */
+.data-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.data-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.data-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.data-text {
+    flex: 1;
+    font-family: monospace;
+    color: var(--text-primary);
+}
+
+.action-button {
+    margin-left: 1rem;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-button:nth-of-type(1) {
+    background: rgba(74, 144, 226, 0.1);
+    color: var(--primary);
+}
+
+.action-button:nth-of-type(2) {
+    background: rgba(32, 201, 151, 0.1);
+    color: var(--success);
+}
+
+.action-button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* 模态框通用样式 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 800px;
+    max-height: 80vh;
+    border-radius: var(--radius);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1.5rem 1.5rem 1.2rem;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.modal-body {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 0.5rem 0.3rem 0.5rem 0;
+}
+
+/* 详细信息样式 */
+.document-details {
+    display: grid;
+    gap: 1.5rem;
+    margin-left: -0.8rem;
+}
+
+.detail-row {
+    background: var(--background);
+    padding: 1rem;
+    border-radius: var(--radius);
+    border-left: 4px solid var(--primary);
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 6px;
+    align-items: start;
+    padding-left: 0.8rem;
+}
+
+.detail-label {
+    display: block;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    margin-right: 0.8rem;
+    min-width: auto;
+    text-align: left;
+    padding-right: 8px;
+}
+
+.detail-value {
+    color: var(--text-primary);
+    word-break: break-all;
+    word-break: break-word;
+    line-height: 1.5;
+}
+
+.method-card {
+    background: white;
+    padding: 1rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 1rem;
+}
+
+.detail-value,
+.grid-item span,
+.method-card,
+.array-item input {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    max-width: 100%;
+}
+
+.detail-row,
+.method-card,
+.form-section {
+    text-align: left;
+    margin-left: 0;
+    padding-left: 1rem;
+}
+
+.grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    justify-content: start;
+    text-align: left;
+}
+
+.grid-item label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.grid-item span {
+    word-break: break-all;
+}
+
+/* 更新表单样式 */
+.form-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.array-item {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.array-item input {
+    min-width: 120px;
+    flex: 1 1 40%;
+    padding: 0.6rem;
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    margin-left: 0;
+}
+
+.add-section {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+button[type="submit"] {
+    background: linear-gradient(135deg, var(--success), #12b886);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: var(--radius);
+}
+
+.modal-footer {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--border);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90vw;
+        max-height: 90vh;
+    }
+
+    .grid-2x2 {
+        grid-template-columns: 1fr;
+    }
+
+    .array-item {
+        flex-direction: column;
+    }
+}
+
+.break-all {
+    word-break: break-all !important;
+}

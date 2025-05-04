@@ -1,0 +1,94 @@
+.user-management-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.user-category {
+    margin-bottom: 2.5rem;
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-title {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.icon {
+    font-size: 1.6rem;
+}
+
+.user-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.user-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.user-card:hover {
+    transform: translateY(-2px);
+}
+
+.user-info {
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.user-address {
+    display: block;
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: #34495e;
+    word-break: break-all;
+}
+
+.user-index {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+}
+
+.action-button {
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    min-width: 100px;
+}
+
+.action-button.primary {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+}
+
+.action-button.danger {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+}
+
+.action-button:hover {
+    opacity: 0.9;
+}
+
+.empty-state {
+    color: #95a5a6;
+    text-align: center;
+    padding: 2rem;
+    grid-column: 1 / -1;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "middle",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "asn1.js": "^5.4.1",
+    "axios": "^1.8.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "elliptic": "^6.6.1",
+    "ethers": "^6.13.5",
+    "express": "^5.1.0",
+    "form-data": "^4.0.2",
+    "json-canonicalize": "^1.0.6",
+    "jsonld-signatures": "^11.5.0",
+    "morgan": "^1.10.0",
+    "typeorm": "^0.3.22"
+  }
+}

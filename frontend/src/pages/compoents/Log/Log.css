@@ -1,0 +1,149 @@
+.did-container {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
+    /* 根据实际容器高度调整 */
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title {
+    color: #2c3e50;
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 12px;
+}
+
+.logs-container {
+    flex: 0.80;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.logs-scroll-wrapper {
+    height: 100%;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.no-logs {
+    text-align: center;
+    color: #7f8c8d;
+    padding: 20px;
+}
+
+.log-item {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.log-item:last-child {
+    margin-bottom: 0;
+}
+
+.log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.status-badge.success {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-badge.failed {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.timestamp {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+}
+
+.log-content {
+    width: 100%;
+}
+
+.log-row {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.log-row:last-child {
+    margin-bottom: 0;
+}
+
+.log-label {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    min-width: 80px;
+    margin-right: 12px;
+    flex-shrink: 0;
+    text-align: left;
+}
+
+.log-value {
+    color: #2c3e50;
+    word-break: break-word;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.monospace {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+}
+
+.error-message {
+    color: #c62828;
+    background: #ffebee;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .did-container {
+        padding: 16px;
+        height: auto;
+    }
+
+    .logs-container {
+        max-height: 70vh;
+    }
+
+    .log-item {
+        margin-bottom: 12px;
+    }
+
+    .log-label {
+        min-width: 70px;
+        font-size: 0.85rem;
+    }
+
+    .log-value {
+        font-size: 0.85rem;
+    }
+}
